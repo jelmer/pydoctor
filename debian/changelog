@@ -1,4 +1,4 @@
-pydoctor (0.5+git20150410-1) UNRELEASED; urgency=medium
+pydoctor (0.5+git20150410-1) experimental; urgency=medium
 
   * New upstream snapshot.
     + Makes output reproducible. Closes: #776783
