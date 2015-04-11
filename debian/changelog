@@ -1,5 +1,7 @@
-pydoctor (0.5+bzr616-2) UNRELEASED; urgency=medium
+pydoctor (0.5+git20150410-1) UNRELEASED; urgency=medium
 
+  * New upstream snapshot.
+    + Makes output reproducible. Closes: #776783
   * Fix watch file.
 
  -- Jelmer Vernooij <jelmer@debian.org>  Tue, 22 Jul 2014 03:36:12 +0200
