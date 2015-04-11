@@ -1,0 +1,170 @@
+.TH PYDOCTOR "1" "December 2010" "pydoctor 0.3" "User Commands"
+.SH NAME
+pydoctor \- API documentation generator for Python
+.SH SYNOPSIS
+.B pydoctor
+[\fIoptions\fR]
+.SH DESCRIPTION
+Pydoctor is an API documentation generator that works primarily by static
+analysis.
+.PP
+It was written primarily to replace epydoc for the purposes of the
+Twisted project as epydoc has difficulties with zope.interface, but can
+be used for non-Zope Python code as well.
+.SH OPTIONS
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+show this help message and exit
+.TP
+\fB\-c\fR CONFIGFILE, \fB\-\-config\fR=\fICONFIGFILE\fR
+Use config from this file (any command lineoptions
+override settings from the file).
+.TP
+\fB\-p\fR INPUTPICKLE, \fB\-\-input\-pickle\fR=\fIINPUTPICKLE\fR
+Load the system from this pickle file (default: none,
+a blank system is created).
+.TP
+\fB\-o\fR OUTPUTPICKLE, \fB\-\-output\-pickle\fR=\fIOUTPUTPICKLE\fR
+Save the system to this pickle file (default: none,
+the system is not saved by default).
+.TP
+\fB\-\-extra\-system\fR=\fISYS\fR:URLPREFIX
+Look for objects in this system to.  Links to these
+objects will have URLPREFIX prepended to them.
+.TP
+\fB\-\-system\-class\fR=\fISYSTEMCLASS\fR
+A dotted name of the class to use to make a system.
+.TP
+\fB\-\-project\-name\fR=\fIPROJECTNAME\fR
+The project name, appears in the html.
+.TP
+\fB\-\-project\-url\fR=\fIPROJECTURL\fR
+The project url, appears in the html if given.
+.TP
+\fB\-\-project\-base\-dir\fR=\fIPROJECTBASEDIRECTORY\fR
+Absolute path to the base directory of the project.
+Source links will be computed based on this value.
+.TP
+\fB\-\-testing\fR
+Don't complain if the run doesn't have any effects.
+.TP
+\fB\-\-pdb\fR
+Like py.test's \fB\-\-pdb\fR.
+.TP
+\fB\-\-make\-html\fR
+Produce html output.
+.TP
+\fB\-\-server\fR
+Serve HTML on a local server.
+.TP
+\fB\-\-server\-port\fR=\fISERVER_PORT\fR
+The port for \fB\-\-server\fR to use.
+.TP
+\fB\-\-local\-only\fR
+Bind the server to localhost only.
+.TP
+\fB\-\-facing\-path\fR=\fIFACING_PATH\fR
+Set up a VHostMonster, with all the confusion that
+implies.
+.TP
+\fB\-\-edit\fR
+When serving HTML, allow editing.
+.TP
+\fB\-\-no\-check\fR
+When serving HTML and allow editing, don't check all
+docstrings first.
+.TP
+\fB\-\-add\-package\fR=\fIPACKAGEDIR\fR
+Add a package to the system.  Can be repeated to add
+more than one package.
+.TP
+\fB\-\-add\-module\fR=\fIMODULE\fR
+Add a module to the system.  Can be repeated.
+.TP
+\fB\-\-prepend\-package\fR=\fIPREPENDEDPACKAGE\fR
+Pretend that all packages are within this one.  Can be
+used to document part of a package.
+.TP
+\fB\-\-resolve\-aliases\fR
+This updates references to classes imported from a
+module into which they were imported to references to
+where they are defined.
+.TP
+\fB\-\-abbreviate\-specialcase\fR=\fIABBREVMAPPING\fR
+This is a comma seperated list of key=value pairs.
+Where any key corresponds to a module name and value
+is the desired abbreviation.  This can be used to
+resolve conflicts with abbreviation where you have two
+or more modules that start with the same letter.
+Example: twistedcaldav=tcd.
+.TP
+\fB\-\-docformat\fR=\fIDOCFORMAT\fR
+Which epydoc\-supported format docstrings are assumed
+to be in.
+.TP
+\fB\-\-html\-subject\fR=\fIHTMLSUBJECTS\fR
+The fullName of object to generate API docs for
+(default: everything).
+.TP
+\fB\-\-html\-summary\-pages\fR
+Only generate the summary pages.
+.TP
+\fB\-\-html\-write\-function\-pages\fR
+Make individual HTML files for every function and
+method. They're not linked to in any pydoctorgenerated HTML, but they can be useful for third\-party
+linking.
+.TP
+\fB\-\-html\-output\fR=\fIHTMLOUTPUT\fR
+Directory to save HTML files to (default 'apidocs')
+.TP
+\fB\-\-html\-writer\fR=\fIHTMLWRITER\fR
+Dotted name of html writer class to use (default
+\&'pydoctor.nevowhtml.NevowWriter', requires Divmod
+Nevow to be installed).
+.TP
+\fB\-\-html\-viewsource\-base\fR=\fIHTMLSOURCEBASE\fR
+This should be the path to the trac browser for the
+top of the svn checkout we are documenting part of.
+.TP
+\fB\-\-html\-use\-sorttable\fR
+Use the sorttable JS library to make tables of
+package, module and class contents sortable
+.TP
+\fB\-\-html\-use\-splitlinks\fR
+Generate (unobstrusive) JavaScript to allow class
+methods to be shown either in one table per base class
+or in one big table.
+.TP
+\fB\-\-html\-shorten\-lists\fR
+Generate (unobstrusive) JavaScript to hide some of the
+entries in long lists of e.g. subclasses.
+.TP
+\fB\-\-livecheck\fR
+Import and examine the modules too.  XXX not working
+right now
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Be noisier.  Can be repeated for more noise.
+.TP
+\fB\-q\fR, \fB\-\-quiet\fR
+Be quieter.
+.TP
+\fB\-\-auto\fR
+Automagic mode: analyze all modules and packages in
+the current working directory and run a local server
+that allows examination and editing of the docstrings.
+.TP
+\fB\-\-verbose\-about\fR=\fIstage\fR
+Be noiser during a particular stage of generation.
+.SH "SEE ALSO"
+Homepage:
+.B http://launchpad.net/pydoctor
+.PP
+Other Python API documentation generators: \fBepydoc(1)\fR, \fBpydoc(1)\fR
+.SH "LICENSE"
+pydoctor is licensed under the simplified BSD license.
+.SH "AUTHORS"
+pydoctor was written and is maintained by Michael Hudson.
+.PP
+This manual page was written by Jelmer Vernooij <jelmer@debian.org>, for the
+Debian project (and may be used by others).
