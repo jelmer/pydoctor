@@ -1,4 +1,4 @@
-pydoctor (0.5+git20151204-1) UNRELEASED; urgency=medium
+pydoctor (0.5+git20151204-1) unstable; urgency=medium
 
   * New upstream snapshot.
   * Bump standards version to 3.9.6 (no changes).
