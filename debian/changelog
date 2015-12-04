@@ -1,3 +1,9 @@
+pydoctor (0.5+git20151204-1) UNRELEASED; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Fri, 04 Dec 2015 23:24:07 +0000
+
 pydoctor (0.5+git20150410-2) unstable; urgency=medium
 
   * Upload to unstable.
