@@ -4,6 +4,8 @@ pydoctor (0.5+git20151204-1) UNRELEASED; urgency=medium
   * Bump standards version to 3.9.6 (no changes).
   * Change Vcs header to Git.
   * Add build dependency on python-setuptools.
+  * Add patch source-date-epoch.diff: Support SOURCE_DATE_EPOCH environment
+    variable. Closes: #807166
 
  -- Jelmer Vernooij <jelmer@debian.org>  Fri, 04 Dec 2015 23:24:07 +0000
 

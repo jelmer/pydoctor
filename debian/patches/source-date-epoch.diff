@@ -1,0 +1,27 @@
+Description: Use build time from SOURCE_DATE_EPOCH environment variable, if set.
+ See https://reproducible-builds.org/specs/source-date-epoch/ for background.
+Author: Jelmer Vernooij <jelmer@jelmer.uk>
+Status: forwarded upstream, https://github.com/twisted/pydoctor/pull/99
+Bug-Debian: http://bus.debian.org/807166
+
+diff --git a/pydoctor/driver.py b/pydoctor/driver.py
+index 0389c0e..58469b9 100644
+--- a/pydoctor/driver.py
++++ b/pydoctor/driver.py
+@@ -296,6 +296,16 @@ def main(args):
+             else:
+                 options.makehtml = False
+ 
++        # Support source date epoch:
++        # https://reproducible-builds.org/specs/source-date-epoch/
++        try:
++            system.buildtime = datetime.datetime.utcfromtimestamp(
++                int(os.environ['SOURCE_DATE_EPOCH']))
++        except ValueError, e:
++            error(e)
++        except KeyError:
++            pass
++
+         if options.buildtime:
+             try:
+                 system.buildtime = datetime.datetime.strptime(
