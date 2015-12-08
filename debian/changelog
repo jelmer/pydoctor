@@ -1,3 +1,10 @@
+pydoctor (0.5+git20151204-2) UNRELEASED; urgency=medium
+
+  * Add patch fix-unicode.diff, to hack in support for newer versions of
+    twisted. Closes: #807088
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Tue, 08 Dec 2015 00:30:58 +0000
+
 pydoctor (0.5+git20151204-1) unstable; urgency=medium
 
   * New upstream snapshot.

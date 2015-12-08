@@ -265,7 +265,7 @@ _control_pat = re.compile('[' + _class + ']')
 def html2stan(crap):
     crap = _control_pat.sub(lambda m:'\\x%02x'%ord(m.group()), crap)
     crap = "<div>" + crap + "</div>"
-    crap = XMLString(crap).load()[0].children
+    crap = XMLString(str(crap)).load()[0].children
     if crap and crap[-1] == u'\n':
         del crap[-1]
     return crap
