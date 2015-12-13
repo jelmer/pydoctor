@@ -1,3 +1,9 @@
+pydoctor (0.5+git20151204-3) UNRELEASED; urgency=medium
+
+  * Remove fix-unicode.diff: applied upstream.
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Sun, 13 Dec 2015 12:41:33 +0000
+
 pydoctor (0.5+git20151204-2) unstable; urgency=medium
 
   * Add patch fix-unicode.diff, to hack in support for newer versions of
