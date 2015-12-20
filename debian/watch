@@ -1,2 +1,2 @@
 version=3
-http://pypi.python.org/pypi/pydoctor/ pydoctor-(.*)\.tar\.gz
+https://pypi.python.org/simple/pydoctor/ .*\/pydoctor-(.*)\.tar\.gz\#md5.*

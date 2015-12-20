@@ -1,6 +1,7 @@
 pydoctor (0.5+git20151204-3) UNRELEASED; urgency=medium
 
   * Remove fix-unicode.diff: applied upstream.
+  * Update watch file.
 
  -- Jelmer Vernooij <jelmer@debian.org>  Sun, 13 Dec 2015 12:41:33 +0000
 
