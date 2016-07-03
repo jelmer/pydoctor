@@ -5,6 +5,7 @@ pydoctor (15.1.0-1) UNRELEASED; urgency=medium
   * Update watch file.
   * Bump standards version to 3.9.8 (no changes).
   * Drop -b unstable from Vcs-Git header.
+  * Drop source-date-epoch patch: applied upstream.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 03 Jul 2016 21:22:01 +0000
 
