@@ -7,7 +7,7 @@ Debianized-Date: Thu, 28 Sep 2006 19:07:50 +0200
 
 Files: *
 Copyright: 2006 Michael Hudson <mwh@python.net>
-License:
+License: MIT
  All Rights Reserved
  .
  Permission to use, copy, modify, and distribute this software and its
