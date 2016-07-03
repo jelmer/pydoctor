@@ -3,6 +3,8 @@ pydoctor (15.1.0-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Remove fix-unicode.diff: applied upstream.
   * Update watch file.
+  * Bump standards version to 3.9.8 (no changes).
+  * Drop -b unstable from Vcs-Git header.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 03 Jul 2016 21:22:01 +0000
 
