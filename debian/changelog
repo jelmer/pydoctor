@@ -1,4 +1,4 @@
-pydoctor (15.1.0-1) UNRELEASED; urgency=medium
+pydoctor (15.1.0-1) unstable; urgency=medium
 
   * New upstream release.
   * Remove fix-unicode.diff: applied upstream.
