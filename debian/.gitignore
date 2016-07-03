@@ -4,3 +4,4 @@ files
 *.prerm.debhelper
 *.substvars
 python-pydoctor
+debhelper-build-stamp
